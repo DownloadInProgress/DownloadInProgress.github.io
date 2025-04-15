@@ -5,54 +5,80 @@
 * {
   box-sizing: border-box;
 }
+body {
+  background-color: white;
+}
 
-.box {
+.header, .footer {
+  background-color: grey;
+  color: white;
+  padding: 15px;
+}
+
+.column {
   float: left;
-  width: 50%;
-  padding: 50px;
-  border: 3px;
+  padding: 15px;
 }
 
-  .box {
-  float: center;
-  width: 33.33%;
-  padding: 50px;
-  border: 3px;
-}
-  
-.box {
-  float: right;
-  width: 33.33%;
-  padding: 50px;
-  border: 3px;
-}
-  
 .clearfix::after {
   content: "";
   clear: both;
   display: table;
 }
+
+.menu {
+  width: 25%;
+}
+
+.content {
+  width: 75%;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 8px;
+  background-color: #33b5e5;
+  color: #ffffff;
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
 </style>
 </head>
 <body>
 
-<h2>Grid of Boxes</h2>
-<p>Float boxes side by side:</p>
+<div class="header">
+  <h1>Chania</h1>
+</div>
 
 <div class="clearfix">
-  <div class="box" style="background-color:red">
-    <p> </p>
+  <div class="column menu">
+    <ul>
+      <li>The Flight</li>
+      <li>The City</li>
+      <li>The Island</li>
+      <li>The Food</li>
+    </ul>
   </div>
- 
-  </div>
-  <div class="box" style="background-color: green">
-    <p> </p>
 
+  <div class="column content">
+   
   </div>
 </div>
 
-<p><strong>Note:</strong> Here, we use the clearfix hack to take care of the layout flow. 
-We also use the box-sizing property to make sure that the box doesn't break due to extra padding. Try to remove this code to see the effect.</p>
+<div class="footer">
+  <p>Footer Text</p>
+</div>
+
+</body>
+</html>
 
 </body>
 </html>
