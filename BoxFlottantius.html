@@ -14,12 +14,18 @@
    background-color: orange;
   }
 
-
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
 
 <body>
-<div class="header">
-<p> Hello world </p>
+<div class="clearfix">
+  <div class="header">
+  <p> Hello world </p>
+  </div>
 </div>
 </body>
 
