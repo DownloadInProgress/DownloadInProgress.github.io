@@ -40,7 +40,7 @@
       font-size: 1.2em;
     }
 
-    /* Menu di navigazione */
+    /* Menu di navigazione con dropdown*/
     nav {
       background-color: #0066cc;
       text-align: center;
@@ -57,6 +57,50 @@
     nav a:hover {
       text-decoration: underline;
     }
+
+    .dropdown {
+  display: inline-block;
+  position: relative;
+  margin: 0 10px;
+}
+
+.dropbtn {
+  background-color: #0066cc;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 180px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  text-align: left;
+}
+
+.dropdown-content a {
+  color: #004080;
+  padding: 10px 15px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #005bb5;
+}
 
     /* Contenuto principale */
     main {
@@ -123,24 +167,30 @@
   <h2>Tutti i nostri lavori! </h2>
   </center>
   
-  <div class="box-container">
-    <div class="box">
-      <h3>Primo periodo</h3>
-      <p> <a href="intestazione.html">  intestazione.html </a> </p>
-  <p> <a href="formattazione.html">  formattazione.html </a> </p>
-  <p> <a href="foto.html">  foto.html </a> </p>
-  <p> <a href="liste.html">  liste.html </a> </p>
-  <p> <a href="paragrafi.html">  paragrafi.html </a> </p>
-  <p> <a href="tabella.html">  tabella.html </a> </p>
-  <p> <a href="esercitazione.html"> esercitazione.html </a> </p>
-  <p> <a href="registrazione.html"> registrazione.html </a> </p>
-    </div>
-    
-    <div class="box">
-      <h3>Secondo periodo</h3>
-      <p>Qui puoi inserire i lavori del secondo periodo, progetti, esercizi, ecc.</p>
+<nav>
+  <div class="dropdown">
+    <button class="dropbtn">Primo periodo</button>
+    <div class="dropdown-content">
+      <a href="intestazione.html">Intestazione</a>
+      <a href="formattazione.html">Formattazione</a>
+      <a href="foto.html">Foto</a>
+      <a href="liste.html">Liste</a>
+      <a href="paragrafi.html">Paragrafi</a>
+      <a href="tabella.html">Tabella</a>
+      <a href="esercitazione.html">Esercitazione</a>
+      <a href="registrazione.html">Registrazione</a>
     </div>
   </div>
+
+  <div class="dropdown">
+    <button class="dropbtn">Secondo periodo</button>
+    <div class="dropdown-content">
+      <a href="#">Progetto 1</a>
+      <a href="#">Progetto 2</a>
+      <a href="#">Altro lavoro</a>
+    </div>
+  </div>
+</nav>
   
 </main>
 
